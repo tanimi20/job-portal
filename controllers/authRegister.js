@@ -1,8 +1,6 @@
 import userModel from "../models/userModel.js";
 
 const authRegister = async (req, res, next) => {
-  console.log("hi");
-
   const { name, email, password } = req.body;
   if (!name) {
     next("name is required");
