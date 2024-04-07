@@ -28,12 +28,11 @@ app.use(morgan("dev"));
 app.use("/api/v1/user", testroute);
 app.use("/api/v1/auth", authRoute);
 
+//login request post
+
 app.use(middelwares);
 
 //here we are making the get method
-app.get("/user", (req, res) => {
-  res.send("<h1>hi there im making job portal api</h1>");
-});
 
 //grtting the enviremental variable from the env file
 
