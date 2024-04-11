@@ -8,6 +8,8 @@ import userModel from "./models/userModel.js";
 //imports the routes
 import testroute from "./routes/testroutes.js";
 import authRoute from "./routes/authRoute.js";
+import userRoutes from "./routes/userRoutes.js";
+import jobsRoutes from "./routes/jobsRoutes.js";
 import cors from "cors";
 import morgan from "morgan";
 import middelwares from "./middelwares/middelwares.js";
@@ -27,6 +29,8 @@ app.use(morgan("dev"));
 //creating the routes
 app.use("/api/v1/user", testroute);
 app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/job", jobsRoutes);
 
 //login request post
 

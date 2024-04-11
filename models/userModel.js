@@ -33,6 +33,7 @@ const useSchema = new mongoose.Schema(
 
 // Middleware for hashing the password
 useSchema.pre("save", async function () {
+  if (!this.isModified) return;
   const salt = await bcrypt.genSalt(10);
 
   // Hash the password with the salt

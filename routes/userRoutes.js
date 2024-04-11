@@ -1,8 +1,11 @@
 import express from "express";
-import testPostController from "../controllers/testController.js";
 import userAuth from "../middelwares/authMiddelware.js";
+import { updateUser } from "../controllers/userController.js";
+
 const router = express.Router();
 
-router.post("/user-post", userAuth, testPostController);
+//routes
 
+//update user || PUT
+router.put("/update-user", userAuth, updateUser);
 export default router;

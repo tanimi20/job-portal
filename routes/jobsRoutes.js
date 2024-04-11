@@ -1,8 +1,8 @@
 import express from "express";
-import testPostController from "../controllers/testController.js";
 import userAuth from "../middelwares/authMiddelware.js";
+import { createJobController } from "../controllers/jobsController.js";
 const router = express.Router();
 
-router.post("/user-post", userAuth, testPostController);
+router.post("/create-job", userAuth, createJobController);
 
 export default router;
